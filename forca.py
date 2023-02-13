@@ -7,10 +7,11 @@ def jogar():
     hanged= False
     while(not hanged and not hit):
         index = 0
-        chute=input("Digite uma letra")
+        chute = input("Digite uma letra")
+        chute = chute.strip( )
         for letra in secrect_word:
             index = index + 1 #ele tem que estar aqui, pois a cada for eu vejo a posição verificada
-            if(chute == letra):
+            if(chute.upper() == letra.upper()):
                 print("Encontrei a letra {} na posição {}".format(chute, index))
 
 
